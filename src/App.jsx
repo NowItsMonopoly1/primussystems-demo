@@ -246,7 +246,12 @@ export default function App() {
       <nav style={{ position: "sticky", top: 0, zIndex: 100, background: "rgba(4,8,15,0.94)", backdropFilter: "blur(12px)", borderBottom: "1px solid #0d1e2e" }}>
         <div className="container" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: "60px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-            <div style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#00d4a0", boxShadow: "0 0 6px #00d4a0" }} />
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style={{ filter: "drop-shadow(0 0 5px rgba(0,212,160,0.7))", flexShrink: 0 }}>
+              <rect x="2.5" y="2.5" width="15" height="15" rx="1" transform="rotate(45 10 10)" stroke="#00d4a0" strokeWidth="1.5" fill="rgba(0,212,160,0.07)"/>
+              <line x1="10" y1="5" x2="10" y2="15" stroke="#00d4a0" strokeWidth="0.75" strokeLinecap="round" opacity="0.45"/>
+              <line x1="5" y1="10" x2="15" y2="10" stroke="#00d4a0" strokeWidth="0.75" strokeLinecap="round" opacity="0.45"/>
+              <circle cx="10" cy="10" r="2" fill="#00d4a0"/>
+            </svg>
             <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "13px", fontWeight: 500, color: "#e0eef8", letterSpacing: "0.1em" }}>PRIMUS SYSTEMS</span>
           </div>
           <div style={{ display: "flex", gap: "28px", alignItems: "center" }}>
@@ -505,7 +510,12 @@ export default function App() {
       <footer style={{ borderTop: "1px solid #0d1e2e", padding: "32px 0", background: "#030609" }}>
         <div className="container" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "16px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-            <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#00d4a0" }} />
+            <svg width="14" height="14" viewBox="0 0 20 20" fill="none" style={{ flexShrink: 0 }}>
+              <rect x="2.5" y="2.5" width="15" height="15" rx="1" transform="rotate(45 10 10)" stroke="#00d4a0" strokeWidth="1.5" fill="rgba(0,212,160,0.07)"/>
+              <line x1="10" y1="5" x2="10" y2="15" stroke="#00d4a0" strokeWidth="0.75" strokeLinecap="round" opacity="0.45"/>
+              <line x1="5" y1="10" x2="15" y2="10" stroke="#00d4a0" strokeWidth="0.75" strokeLinecap="round" opacity="0.45"/>
+              <circle cx="10" cy="10" r="2" fill="#00d4a0"/>
+            </svg>
             <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "12px", color: "#2a5a7a", letterSpacing: "0.1em" }}>PRIMUS SYSTEMS LLC</span>
           </div>
           <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", color: "#1a3a5a" }}>DECISION ASSURANCE INFRASTRUCTURE · PRIMUSSYSTEMS.IO</div>

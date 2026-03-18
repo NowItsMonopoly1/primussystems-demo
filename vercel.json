@@ -1,5 +1,5 @@
 {
-  "name": "primus-demo",
+  "name": "primus",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
