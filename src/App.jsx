@@ -220,19 +220,19 @@ export default function App() {
   const pilotRef = useRef(null);
 
   return (
-    <div style={{ fontFamily: "'DM Sans', 'Helvetica Neue', sans-serif", background: "#04080f", color: "#c8d8e8", minHeight: "100vh" }}>
+    <div style={{ fontFamily: "'IBM Plex Sans', 'Helvetica Neue', sans-serif", background: "#04080f", color: "#c8d8e8", minHeight: "100vh" }}>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&family=Playfair+Display:wght@700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=IBM+Plex+Mono:wght@400;500;600&family=Playfair+Display:wght@700;800&display=swap');
         *{box-sizing:border-box;margin:0;padding:0}
         html{scroll-behavior:smooth}
         ::selection{background:#003a6a}
         ::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:#04080f}::-webkit-scrollbar-thumb{background:#1a2a3a}
-        .cta-primary{background:#003a6a;color:#60c0f0;border:1px solid #1a6090;padding:14px 32px;font-size:13px;font-family:'DM Mono',monospace;letter-spacing:0.1em;cursor:pointer;border-radius:3px;transition:all 0.2s;font-weight:500}
+        .cta-primary{background:#003a6a;color:#60c0f0;border:1px solid #1a6090;padding:14px 32px;font-size:13px;font-family:'IBM Plex Mono',monospace;letter-spacing:0.1em;cursor:pointer;border-radius:3px;transition:all 0.2s;font-weight:500}
         .cta-primary:hover{background:#004d8a;border-color:#2a80b0}
-        .cta-outline{background:transparent;color:#4a7a9a;border:1px solid #1a3a5a;padding:14px 32px;font-size:13px;font-family:'DM Mono',monospace;letter-spacing:0.1em;cursor:pointer;border-radius:3px;transition:all 0.2s}
+        .cta-outline{background:transparent;color:#4a7a9a;border:1px solid #1a3a5a;padding:14px 32px;font-size:13px;font-family:'IBM Plex Mono',monospace;letter-spacing:0.1em;cursor:pointer;border-radius:3px;transition:all 0.2s}
         .cta-outline:hover{border-color:#2a5a7a;color:#7aaac8}
         .container{max-width:1100px;margin:0 auto;padding:0 32px}
-        .label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#1e5a80;text-transform:uppercase;margin-bottom:16px}
+        .label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.2em;color:#1e5a80;text-transform:uppercase;margin-bottom:16px}
         .h2{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,42px);font-weight:700;color:#e0eef8;line-height:1.2;margin-bottom:20px}
         .divider{border:none;border-top:1px solid #0d1e2e;margin:0}
         input:focus,textarea:focus,select:focus{outline:none;border-color:#1e6090!important}
@@ -247,12 +247,13 @@ export default function App() {
         <div className="container" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: "60px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
             <div style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#00d4a0", boxShadow: "0 0 6px #00d4a0" }} />
-            <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "13px", fontWeight: 500, color: "#e0eef8", letterSpacing: "0.1em" }}>PRIMUS SYSTEMS</span>
+            <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "13px", fontWeight: 500, color: "#e0eef8", letterSpacing: "0.1em" }}>PRIMUS SYSTEMS</span>
           </div>
           <div style={{ display: "flex", gap: "28px", alignItems: "center" }}>
             <span style={{ color: "#4a7a9a", fontSize: "13px", cursor: "pointer" }} onClick={() => demoRef.current?.scrollIntoView({ behavior: "smooth" })}>Demo</span>
             <span style={{ color: "#4a7a9a", fontSize: "13px", cursor: "pointer" }} onClick={() => pilotRef.current?.scrollIntoView({ behavior: "smooth" })}>Pilot</span>
             <Link to="/proof" style={{ color: "#4a7a9a", fontSize: "13px", textDecoration: "none" }}>Proof</Link>
+            <Link to="/compliance" style={{ color: "#4a7a9a", fontSize: "13px", textDecoration: "none" }}>Security</Link>
             <button className="cta-primary" style={{ padding: "8px 20px", fontSize: "11px" }} onClick={() => pilotRef.current?.scrollIntoView({ behavior: "smooth" })}>REQUEST PILOT</button>
           </div>
         </div>
@@ -262,8 +263,8 @@ export default function App() {
       <div style={{ background: "#030609", borderBottom: "1px solid #0d1e2e", overflow: "hidden", height: "32px", display: "flex", alignItems: "center" }}>
         <div style={{ display: "flex", animation: "ticker 35s linear infinite", whiteSpace: "nowrap" }}>
           {[0, 1].map(ri => (
-            <span key={ri} style={{ fontFamily: "'DM Mono', monospace", fontSize: "10px", color: "#1e5a80", letterSpacing: "0.1em" }}>
-              {["EU AI ACT ANNEX III — AUG 2, 2026", "FINES UP TO EUR 35M OR 7% GLOBAL REVENUE", "ARTICLE 9 TECHNICAL FILE REQUIRED", "DECISION-LAYER ENFORCEMENT — NOT MONITORING", "COMPLIANCE PROOF CHAIN — CRYPTOGRAPHICALLY SIGNED", "FAIL-CLOSED BY DEFAULT"].map(t => (
+            <span key={ri} style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", color: "#1e5a80", letterSpacing: "0.1em" }}>
+              {["COLORADO AI ACT — JUN 30, 2026", "EU AI ACT ANNEX III — AUG 2, 2026", "EU PRODUCT LIABILITY DIRECTIVE — DEC 9, 2026", "FINES UP TO EUR 35M OR 7% GLOBAL REVENUE", "DECISION-LAYER ENFORCEMENT — NOT MONITORING", "COMPLIANCE PROOF CHAIN — CRYPTOGRAPHICALLY SIGNED", "FAIL-CLOSED BY DEFAULT", "SOC 2 TYPE I — IN PREPARATION · Q3 2026"].map(t => (
                 <span key={t} style={{ marginRight: "80px" }}>◆ {t}</span>
               ))}
             </span>
@@ -277,12 +278,12 @@ export default function App() {
         <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(0,50,100,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,50,100,0.03) 1px,transparent 1px)", backgroundSize: "60px 60px", pointerEvents: "none" }} />
         <div className="container" style={{ position: "relative" }}>
           <div style={{ maxWidth: "700px" }}>
-            <div className="label fu">Decision Infrastructure — v2.1</div>
+            <div className="label fu">Decision Logic Layer — v2.1</div>
             <h1 className="fu" style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(36px,5vw,62px)", fontWeight: 800, color: "#e8f4ff", lineHeight: "1.1", marginBottom: "24px", animationDelay: "0.1s" }}>
-              Deterministic Decision<br /><span style={{ color: "#00d4a0" }}>Infrastructure</span> for AI
+              Deterministic Decision<br /><span style={{ color: "#00d4a0" }}>Infrastructure</span> for Autonomous AI
             </h1>
             <p className="fu" style={{ fontSize: "17px", color: "#6a9ab8", lineHeight: "1.7", marginBottom: "40px", fontWeight: 300, animationDelay: "0.2s" }}>
-              AI systems are making critical decisions in finance, healthcare, and risk. Primus Systems creates immutable decision logs, audit artifacts, and governance controls — enforced before execution, not observed after.
+              AI models generate outputs. Autonomous agents make decisions. Primus Systems governs the decision logic layer — enforced before execution, cryptographically sealed, court-admissible at the moment of action.
             </p>
             <div className="fu" style={{ display: "flex", gap: "14px", flexWrap: "wrap", animationDelay: "0.3s" }}>
               <button className="cta-primary" onClick={() => demoRef.current?.scrollIntoView({ behavior: "smooth" })}>VIEW LIVE DEMO</button>
@@ -290,7 +291,7 @@ export default function App() {
             </div>
           </div>
           <div style={{ marginTop: "80px", display: "flex", borderTop: "1px solid #0d1e2e", borderBottom: "1px solid #0d1e2e", flexWrap: "wrap" }}>
-            {[["EUR 35M", "Max fine — Article 16"], ["Aug 2, 2026", "Annex III enforcement"], ["< 1.2ms", "Intercept latency (SDK)"], ["3 verticals", "Fintech · Healthcare · Supply"]].map(([val, label], i) => (
+            {[["EUR 35M", "Max fine — EU AI Act"], ["3 hard deadlines", "Jun 30 · Aug 2 · Dec 9"], ["< 1.2ms", "Intercept latency (SDK)"], ["3 verticals", "Fintech · Healthcare · Supply"]].map(([val, label], i) => (
               <div key={i} style={{ flex: "1", minWidth: "160px", padding: "24px 28px", borderRight: i < 3 ? "1px solid #0d1e2e" : "none" }}>
                 <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "22px", color: "#e0eef8", fontWeight: 500, marginBottom: "4px" }}>{val}</div>
                 <div style={{ fontSize: "11px", color: "#2a5a7a" }}>{label}</div>
@@ -446,7 +447,7 @@ export default function App() {
                     ))}
                   </div>
                 </div>
-                {[{ name: "Entry Pilot", price: "$15,000", scope: "Single AI decision vertical. Fintech, healthcare, or supply chain. 30-day deployment. Article 9 technical file foundation.", highlight: true }, { name: "Full Conformity", price: "$25,000–$50,000", scope: "Multi-vertical deployment. Complete EU AI Act Annex III mapping. Ongoing artifact generation. Legal team deliverable.", highlight: false }].map((tier, i) => (
+                {[{ name: "Decision Liability Assessment", price: "$25,000–$35,000", scope: "Board-ready memo quantifying your institution's AI compliance exposure across all three 2026 enforcement deadlines. Signed deliverable your legal team can act on. 50% credited toward Year 1 deployment.", highlight: true }, { name: "Institutional Deployment", price: "$75,000–$200,000/yr", scope: "Multi-vertical deployment. Complete EU AI Act Annex III mapping. Ongoing artifact generation. SSO, In-VPC hosting, dedicated integration support.", highlight: false }].map((tier, i) => (
                   <div key={i} style={{ padding: "20px", background: "#040810", border: `1px solid ${tier.highlight ? "#003a6a" : "#0d1e2e"}`, borderRadius: "4px" }}>
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "8px" }}>
                       <div style={{ fontSize: "14px", color: "#c8d8e8", fontWeight: 500 }}>{tier.name}</div>
@@ -491,7 +492,7 @@ export default function App() {
                         rows={4} style={{ width: "100%", background: "#030609", color: "#c8d8e8", border: "1px solid #0d1e2e", borderRadius: "3px", padding: "10px 12px", fontSize: "14px", resize: "vertical", fontFamily: "inherit" }} />
                     </div>
                     <button type="submit" className="cta-primary" style={{ width: "100%" }}>REQUEST PILOT ACCESS</button>
-                    <div style={{ marginTop: "12px", fontSize: "10px", color: "#1a3a5a", textAlign: "center", fontFamily: "'DM Mono', monospace" }}>Limited pilot slots available before Aug 2026 deadline.</div>
+                    <div style={{ marginTop: "12px", fontSize: "10px", color: "#1a3a5a", textAlign: "center", fontFamily: "'IBM Plex Mono', monospace" }}>Limited slots. Three enforcement deadlines before Dec 2026.</div>
                   </form>
                 )}
               </div>
@@ -505,10 +506,10 @@ export default function App() {
         <div className="container" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "16px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
             <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#00d4a0" }} />
-            <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "12px", color: "#2a5a7a", letterSpacing: "0.1em" }}>PRIMUS SYSTEMS LLC</span>
+            <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "12px", color: "#2a5a7a", letterSpacing: "0.1em" }}>PRIMUS SYSTEMS LLC</span>
           </div>
-          <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "10px", color: "#1a3a5a" }}>DECISION ASSURANCE INFRASTRUCTURE · PRIMUSSYSTEMS.IO</div>
-          <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "10px", color: "#1a3a5a" }}>EU AI ACT ANNEX III · AUG 2, 2026</div>
+          <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", color: "#1a3a5a" }}>DECISION ASSURANCE INFRASTRUCTURE · PRIMUSSYSTEMS.IO</div>
+          <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", color: "#1a3a5a" }}>COLORADO AI ACT · EU AI ACT · EU PRODUCT LIABILITY DIRECTIVE</div>
         </div>
       </footer>
     </div>
