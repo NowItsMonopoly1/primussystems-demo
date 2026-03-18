@@ -1,0 +1,34 @@
+{
+  "snapshot_id": "INP-2026-03-15-0001",
+  "system": "PrimusQuant",
+  "strategy": "momentum_pullback_v1",
+  "asset": "SOL-PERP",
+  "venue": "Drift Protocol",
+  "timestamp": "2026-03-15T14:22:18Z",
+  "market_data": {
+    "price": 142.87,
+    "price_MA20": 138.21,
+    "price_24h_high": 147.33,
+    "price_24h_low": 139.02,
+    "volume_current_candle": 84312.5,
+    "volume_MA10": 61204.3,
+    "funding_rate_8h": 0.00021,
+    "open_interest_usd": 48200000
+  },
+  "portfolio_state": {
+    "account_equity_sol": 10.0,
+    "daily_pnl_sol": -0.031,
+    "daily_loss_cap_sol": 0.05,
+    "open_positions": 1,
+    "max_concurrent_trades": 3,
+    "position_size_proposed_sol": 0.25
+  },
+  "signal": {
+    "direction": "long",
+    "confidence": 0.71,
+    "pullback_pct_from_high": 0.038,
+    "trend_confirmed": true,
+    "volume_impulse_confirmed": true
+  },
+  "inputs_hash": "a73f4c92d8b1e056f3c29471ad84f7c2b93e1057d4a6082c19f53d8e7b620a41"
+}

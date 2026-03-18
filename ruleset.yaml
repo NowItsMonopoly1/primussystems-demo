@@ -1,0 +1,55 @@
+# Primus OS — Governance Ruleset
+# Strategy: momentum_pullback_v1
+# Version: 1.0.0
+# Effective: 2026-03-01T00:00:00Z
+
+ruleset_id: RS-PRIMUSQUANT-MPV1
+description: >
+  Long entry rules for momentum-with-pullback strategy on perpetual futures.
+  All rules must evaluate TRUE for a BUY signal to proceed to risk governor.
+
+rules:
+  - id: R-001
+    name: trend_above_MA20
+    description: Current price must be above 20-period moving average
+    condition: price > price_MA20
+    observed:
+      price: 142.87
+      price_MA20: 138.21
+    result: PASS
+    margin: 4.66
+
+  - id: R-002
+    name: pullback_within_range
+    description: Price must have pulled back 3-6% from recent high before entry
+    condition: 0.03 <= pullback_pct_from_high <= 0.06
+    observed:
+      pullback_pct_from_high: 0.038
+    result: PASS
+    margin: 0.008
+
+  - id: R-003
+    name: volume_impulse_confirmed
+    description: Current candle volume must exceed 10-period average volume by 30%
+    condition: volume_current_candle > volume_MA10 * 1.30
+    observed:
+      volume_current_candle: 84312.5
+      volume_MA10: 61204.3
+      threshold: 79565.59
+    result: PASS
+    margin: 4746.91
+
+  - id: R-004
+    name: funding_rate_not_extreme
+    description: 8h funding rate must be below 0.05% to avoid long-side squeeze risk
+    condition: funding_rate_8h < 0.0005
+    observed:
+      funding_rate_8h: 0.00021
+    result: PASS
+    margin: 0.00029
+
+ruleset_evaluation:
+  rules_evaluated: 4
+  rules_passed: 4
+  rules_failed: 0
+  overall: PROCEED_TO_RISK_GOVERNOR

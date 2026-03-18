@@ -1,0 +1,4 @@
+e522bd30a03d94323c337ed26d7bbcde6b43428d0c36821ecd822ca06fba21b4  decision.json
+Algorithm: SHA-256
+Generated: 2026-03-15T14:22:19Z
+System: PrimusQuant / Primus OS v0.1.0

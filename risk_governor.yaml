@@ -1,0 +1,48 @@
+# Primus OS — Risk Governor Configuration
+# System: PrimusQuant
+# Version: 1.0.0
+
+governor_id: GOV-PRIMUSQUANT-001
+description: >
+  Hard constraints enforced AFTER ruleset passes.
+  Any governor violation results in immediate REJECT — no override permitted.
+  Fail behavior: CLOSED (no trade executes on ambiguous governor state).
+
+constraints:
+  - id: G-001
+    name: daily_loss_cap
+    description: Total daily realized + unrealized loss must not exceed 0.5% of account equity
+    limit_sol: 0.05
+    observed_daily_pnl_sol: -0.031
+    headroom_sol: 0.019
+    result: PASS
+
+  - id: G-002
+    name: max_concurrent_trades
+    description: No more than 3 open positions at any time
+    limit: 3
+    observed_open_positions: 1
+    headroom: 2
+    result: PASS
+
+  - id: G-003
+    name: position_size_cap
+    description: Single trade size must not exceed 2.5% of account equity
+    limit_pct: 0.025
+    limit_sol: 0.25
+    proposed_sol: 0.25
+    result: PASS
+
+  - id: G-004
+    name: open_interest_threshold
+    description: Market open interest must exceed $5M USD to ensure adequate liquidity
+    limit_usd: 5000000
+    observed_usd: 48200000
+    result: PASS
+
+governor_evaluation:
+  constraints_evaluated: 4
+  constraints_passed: 4
+  constraints_failed: 0
+  fail_mode: CLOSED
+  overall: APPROVED

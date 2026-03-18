@@ -1,0 +1,22 @@
+{
+  "decision_id": "PQ-2026-03-15-0001",
+  "system": "PrimusQuant",
+  "strategy": "momentum_pullback_v1",
+  "asset": "SOL-PERP",
+  "venue": "Drift Protocol",
+  "inputs_snapshot_id": "INP-2026-03-15-0001",
+  "inputs_hash": "a73f4c92d8b1e056f3c29471ad84f7c2b93e1057d4a6082c19f53d8e7b620a41",
+  "governance_rules_evaluated": ["R-001", "R-002", "R-003", "R-004"],
+  "ruleset_result": "PROCEED",
+  "governor_constraints_evaluated": ["G-001", "G-002", "G-003", "G-004"],
+  "governor_result": "APPROVED",
+  "decision": "execute_trade",
+  "execution_params": {
+    "direction": "long",
+    "size_sol": 0.25,
+    "asset": "SOL-PERP"
+  },
+  "timestamp": "2026-03-15T14:22:19Z",
+  "primus_version": "0.1.0",
+  "decision_hash": "e522bd30a03d94323c337ed26d7bbcde6b43428d0c36821ecd822ca06fba21b4"
+}
