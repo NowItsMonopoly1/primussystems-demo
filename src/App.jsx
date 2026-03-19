@@ -259,7 +259,7 @@ export default function App() {
             <span style={{ color: "#4a7a9a", fontSize: "13px", cursor: "pointer" }} onClick={() => pilotRef.current?.scrollIntoView({ behavior: "smooth" })}>Pilot</span>
             <Link to="/proof" style={{ color: "#4a7a9a", fontSize: "13px", textDecoration: "none" }}>Proof</Link>
             <Link to="/compliance" style={{ color: "#4a7a9a", fontSize: "13px", textDecoration: "none" }}>Security</Link>
-            <button className="cta-primary" style={{ padding: "8px 20px", fontSize: "11px" }} onClick={() => pilotRef.current?.scrollIntoView({ behavior: "smooth" })}>REQUEST PILOT</button>
+            <button className="cta-primary" style={{ padding: "8px 20px", fontSize: "11px" }} onClick={() => pilotRef.current?.scrollIntoView({ behavior: "smooth" })}>BOOK EXPOSURE REVIEW</button>
           </div>
         </div>
       </nav>
@@ -292,13 +292,13 @@ export default function App() {
             </p>
             <div className="fu" style={{ display: "flex", gap: "14px", flexWrap: "wrap", animationDelay: "0.3s" }}>
               <button className="cta-primary" onClick={() => demoRef.current?.scrollIntoView({ behavior: "smooth" })}>VIEW LIVE DEMO</button>
-              <button className="cta-outline" onClick={() => pilotRef.current?.scrollIntoView({ behavior: "smooth" })}>REQUEST PILOT</button>
+              <button className="cta-outline" onClick={() => pilotRef.current?.scrollIntoView({ behavior: "smooth" })}>BOOK EXPOSURE REVIEW</button>
             </div>
           </div>
           <div style={{ marginTop: "80px", display: "flex", borderTop: "1px solid #0d1e2e", borderBottom: "1px solid #0d1e2e", flexWrap: "wrap" }}>
             {[["EUR 35M", "Max fine — EU AI Act"], ["3 hard deadlines", "Jun 30 · Aug 2 · Dec 9"], ["< 1.2ms", "Intercept latency (SDK)"], ["3 verticals", "Fintech · Healthcare · Supply"]].map(([val, label], i) => (
               <div key={i} style={{ flex: "1", minWidth: "160px", padding: "24px 28px", borderRight: i < 3 ? "1px solid #0d1e2e" : "none" }}>
-                <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "22px", color: "#e0eef8", fontWeight: 500, marginBottom: "4px" }}>{val}</div>
+                <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "22px", color: "#e0eef8", fontWeight: 500, marginBottom: "4px" }}>{val}</div>
                 <div style={{ fontSize: "11px", color: "#2a5a7a" }}>{label}</div>
               </div>
             ))}
@@ -322,11 +322,11 @@ export default function App() {
             <div style={{ flex: "1", minWidth: "280px" }}>
               {["No deterministic record of how decisions were made", "Regulatory exposure under EU AI Act Annex III", "Inability to prove model behavior to auditors", "No immutable decision evidence for legal review", "Compliance policies with no enforcement mechanism"].map((p, i) => (
                 <div key={i} style={{ display: "flex", gap: "14px", alignItems: "flex-start", padding: "14px 0", borderBottom: "1px solid #0d1e2e" }}>
-                  <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "10px", color: "#ff4a4a", marginTop: "3px", flexShrink: 0 }}>✗</span>
+                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", color: "#ff4a4a", marginTop: "3px", flexShrink: 0 }}>✗</span>
                   <span style={{ fontSize: "14px", color: "#5a8aa8" }}>{p}</span>
                 </div>
               ))}
-              <div style={{ marginTop: "20px", background: "#030609", border: "1px solid #1a2535", borderRadius: "4px", padding: "16px 20px", fontFamily: "'DM Mono', monospace", fontSize: "11px" }}>
+              <div style={{ marginTop: "20px", background: "#030609", border: "1px solid #1a2535", borderRadius: "4px", padding: "16px 20px", fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px" }}>
                 <div style={{ color: "#1e5a80", marginBottom: "8px", fontSize: "9px", letterSpacing: "0.15em" }}>EXPOSURE BY INDUSTRY</div>
                 {["Fintech platforms", "AI SaaS products", "Autonomous trading systems", "Regulated enterprise AI"].map((s, i, arr) => (
                   <div key={i} style={{ color: "#4a7a9a", padding: "5px 0", borderBottom: i < arr.length - 1 ? "1px solid #0d1e2e" : "none" }}>→ {s}</div>
@@ -346,18 +346,18 @@ export default function App() {
             <div className="label">The Solution</div>
             <h2 className="h2" style={{ maxWidth: "600px", margin: "0 auto 16px" }}>A decision audit layer that enforces before execution.</h2>
             <p style={{ color: "#3a6a8a", fontSize: "15px", fontWeight: 300, maxWidth: "500px", margin: "0 auto" }}>
-              Think of it as <span style={{ color: "#00d4a0", fontFamily: "'DM Mono', monospace" }}>"Git for machine decisions"</span> — every decision versioned, constrained, and signed.
+              Think of it as <span style={{ color: "#00d4a0", fontFamily: "'IBM Plex Mono', monospace" }}>"Git for machine decisions"</span> — every decision versioned, constrained, and signed.
             </p>
           </div>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0", marginBottom: "60px", flexWrap: "wrap" }}>
             {[["AI Model", "#1a2535", "#4a7a9a", false], ["  →  ", "transparent", "#1e5a80", true], ["PRIMUS INTERCEPT", "#001828", "#00d4a0", false], ["  →  ", "transparent", "#1e5a80", true], ["Execution", "#1a2535", "#4a7a9a", false]].map(([label, bg, color, isArrow], i) => (
-              <div key={i} style={{ padding: isArrow ? "0 8px" : "14px 24px", background: bg, border: isArrow ? "none" : `1px solid ${label === "PRIMUS INTERCEPT" ? "#00d4a0" : "#1a2535"}`, borderRadius: "4px", fontFamily: "'DM Mono', monospace", fontSize: isArrow ? "16px" : "12px", color, letterSpacing: "0.08em", fontWeight: label === "PRIMUS INTERCEPT" ? 500 : 400, boxShadow: label === "PRIMUS INTERCEPT" ? "0 0 20px rgba(0,212,160,0.1)" : "none" }}>{label}</div>
+              <div key={i} style={{ padding: isArrow ? "0 8px" : "14px 24px", background: bg, border: isArrow ? "none" : `1px solid ${label === "PRIMUS INTERCEPT" ? "#00d4a0" : "#1a2535"}`, borderRadius: "4px", fontFamily: "'IBM Plex Mono', monospace", fontSize: isArrow ? "16px" : "12px", color, letterSpacing: "0.08em", fontWeight: label === "PRIMUS INTERCEPT" ? 500 : 400, boxShadow: label === "PRIMUS INTERCEPT" ? "0 0 20px rgba(0,212,160,0.1)" : "none" }}>{label}</div>
             ))}
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "1px", background: "#0d1e2e", border: "1px solid #0d1e2e", borderRadius: "6px", overflow: "hidden" }}>
             {[["Decision Intercept Layer", "Sits between model output and execution. Every decision passes through the governance kernel before any action fires."], ["Constraint Enforcement", "Rules encoded in the kernel. Non-compliant decisions are refused before they execute — not flagged after."], ["Compliance Proof Chain", "Every decision generates a cryptographically signed, timestamped artifact. SHA-256 chained. Cannot be backdated."], ["Court-Admissible Artifacts", "Audit trail your legal team can use. Structured for EU AI Act Article 9 technical file requirements."]].map(([title, desc], i) => (
               <div key={i} style={{ padding: "28px", background: "#040810" }}>
-                <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "10px", color: "#00d4a0", letterSpacing: "0.15em", marginBottom: "10px" }}>0{i + 1}</div>
+                <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", color: "#00d4a0", letterSpacing: "0.15em", marginBottom: "10px" }}>0{i + 1}</div>
                 <div style={{ fontSize: "15px", color: "#c8d8e8", fontWeight: 500, marginBottom: "10px" }}>{title}</div>
                 <div style={{ fontSize: "13px", color: "#3a6a8a", lineHeight: "1.7", fontWeight: 300 }}>{desc}</div>
               </div>
@@ -377,7 +377,7 @@ export default function App() {
             <p style={{ color: "#3a6a8a", fontSize: "15px", fontWeight: 300, maxWidth: "520px" }}>Submit a decision. Watch constraints evaluate in real time. See the Compliance Proof Chain artifact — the record your auditor will ask for.</p>
           </div>
           <LiveDemo />
-          <div style={{ marginTop: "16px", fontFamily: "'DM Mono', monospace", fontSize: "10px", color: "#1a3a5a", textAlign: "center" }}>
+          <div style={{ marginTop: "16px", fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", color: "#1a3a5a", textAlign: "center" }}>
             Default loads a REFUSED scenario. Change risk_score to 0.20 to see an APPROVAL artifact.
           </div>
         </div>
@@ -404,16 +404,16 @@ export default function App() {
             ].map(({ label, color, symbol, lines }) => (
               <div key={label} style={{ background: "#040810", padding: "24px", borderLeft: `3px solid ${color}` }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "14px" }}>
-                  <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "11px", fontWeight: 700, letterSpacing: "0.1em", color }}>{label}</span>
-                  <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "10px", color: "#1e5a80" }}>{symbol} · 2026-03-17</span>
+                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", fontWeight: 700, letterSpacing: "0.1em", color }}>{label}</span>
+                  <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", color: "#1e5a80" }}>{symbol} · 2026-03-17</span>
                 </div>
                 {lines.map(line => (
-                  <div key={line} style={{ fontFamily: "'DM Mono', monospace", fontSize: "11px", color: "#3a6a8a", marginBottom: "5px", lineHeight: 1.6 }}>{line}</div>
+                  <div key={line} style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", color: "#3a6a8a", marginBottom: "5px", lineHeight: 1.6 }}>{line}</div>
                 ))}
               </div>
             ))}
           </div>
-          <div style={{ marginTop: "16px", fontFamily: "'DM Mono', monospace", fontSize: "10px", color: "#1a3a5a", textAlign: "center" }}>
+          <div style={{ marginTop: "16px", fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", color: "#1a3a5a", textAlign: "center" }}>
             Artifacts are cryptographically chained JSONL. Deterministic replay from request_id.
           </div>
         </div>
@@ -421,86 +421,191 @@ export default function App() {
 
       <hr className="divider" />
 
-      {/* PILOT */}
+      {/* ENGAGEMENT */}
       <section style={{ padding: "100px 0", background: "#030609" }} ref={pilotRef}>
         <div className="container">
-          <div style={{ display: "flex", gap: "80px", flexWrap: "wrap" }}>
-            <div style={{ flex: "1", minWidth: "280px" }}>
-              <div className="label">Pilot Program</div>
-              <h2 className="h2">Launch a Decision Logging Pilot</h2>
-              <p style={{ color: "#3a6a8a", fontSize: "15px", fontWeight: 300, lineHeight: "1.8", marginBottom: "32px" }}>We work with a small number of companies to implement Primus Systems in production. Each pilot is scoped to your AI decision environment and delivers court-admissible artifacts your legal team can use immediately.</p>
-              {["Integration with existing AI models", "Deterministic logging infrastructure", "Governance artifact generation", "Compliance-ready audit trail", "Article 9 technical file foundation"].map((item, i, arr) => (
-                <div key={i} style={{ display: "flex", gap: "12px", alignItems: "flex-start", padding: "10px 0", borderBottom: i < arr.length - 1 ? "1px solid #0d1e2e" : "none" }}>
-                  <span style={{ color: "#00d4a0", fontFamily: "'DM Mono', monospace", fontSize: "11px", marginTop: "2px", flexShrink: 0 }}>✓</span>
-                  <span style={{ fontSize: "14px", color: "#5a8aa8" }}>{item}</span>
+
+          {/* Header */}
+          <div style={{ marginBottom: "56px", maxWidth: "700px" }}>
+            <div className="label">Engagement Architecture</div>
+            <h2 className="h2">Deploy Behavioral Risk Infrastructure</h2>
+            <p style={{ color: "#3a6a8a", fontSize: "15px", fontWeight: 300, lineHeight: "1.8" }}>
+              Primus Systems helps organizations prevent unauthorized AI decisions, quantify machine decision liability, and enforce policy at runtime — with auditable evidence that survives regulatory scrutiny.
+            </p>
+          </div>
+
+          {/* Contrast strip */}
+          <div style={{ marginBottom: "52px", display: "grid", gridTemplateColumns: "1fr 1fr", border: "1px solid #0d1e2e", borderRadius: "4px", overflow: "hidden" }}>
+            <div style={{ padding: "28px 32px", background: "#040810", borderRight: "1px solid #0d1e2e" }}>
+              <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "9px", color: "#1e3a5a", letterSpacing: "0.18em", marginBottom: "20px" }}>TRADITIONAL TOOLS</div>
+              {[
+                ["Monitor after the fact", "Alerts fire after a non-compliant decision has already executed."],
+                ["Alert on failure", "Failure is logged. Damage is already done."],
+                ["Store logs", "Logs are observability exhaust — not defensible evidence."],
+              ].map(([title, desc], i) => (
+                <div key={i} style={{ display: "flex", gap: "14px", padding: "11px 0", borderBottom: i < 2 ? "1px solid #0a1a2a" : "none" }}>
+                  <span style={{ color: "#ff4a4a", fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", marginTop: "2px", flexShrink: 0 }}>✗</span>
+                  <div>
+                    <div style={{ fontSize: "13px", color: "#3a5a7a", fontWeight: 500, marginBottom: "3px" }}>{title}</div>
+                    <div style={{ fontSize: "12px", color: "#1e3a5a", fontWeight: 300, lineHeight: 1.6 }}>{desc}</div>
+                  </div>
                 </div>
               ))}
-              <div style={{ marginTop: "32px", display: "flex", flexDirection: "column", gap: "10px" }}>
-                <div style={{ padding: "20px", background: "#040810", border: "1px solid #00d4a033", borderLeft: "3px solid #00d4a0", borderRadius: "4px" }}>
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "8px" }}>
-                    <div style={{ fontSize: "14px", color: "#c8d8e8", fontWeight: 500 }}>Decision Audit Proof</div>
-                    <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "16px", color: "#00d4a0", fontWeight: 500 }}>$2,500</div>
-                  </div>
-                  <div style={{ fontSize: "12px", color: "#2a5a7a", lineHeight: "1.7", marginBottom: "14px" }}>
-                    We run your AI decision system through the Primus kernel and return a live enforcement proof packet — approvals, refusals, and exact constraint receipts. No commitment required.
-                  </div>
-                  <div style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
-                    {["Runtime enforcement verification", "Approval + block artifact examples", "LAW-level constraint receipts", "Delivered in 5 business days"].map(item => (
-                      <div key={item} style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "12px", color: "#3a6a8a" }}>
-                        <span style={{ color: "#00d4a0", fontFamily: "'DM Mono', monospace", fontSize: "10px" }}>✓</span>{item}
-                      </div>
-                    ))}
+            </div>
+            <div style={{ padding: "28px 32px", background: "#010d07", borderLeft: "3px solid #00d4a0" }}>
+              <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "9px", color: "#00d4a0", letterSpacing: "0.18em", marginBottom: "20px" }}>PRIMUS SYSTEMS</div>
+              {[
+                ["Block before execution", "Non-compliant decisions are intercepted before any action fires."],
+                ["Enforce policy-as-code", "Rules are live constraints at the decision boundary — not post-hoc checks."],
+                ["Produce defensible evidence", "Every artifact is cryptographically signed, chained, and court-admissible."],
+              ].map(([title, desc], i) => (
+                <div key={i} style={{ display: "flex", gap: "14px", padding: "11px 0", borderBottom: i < 2 ? "1px solid #0a2a14" : "none" }}>
+                  <span style={{ color: "#00d4a0", fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", marginTop: "2px", flexShrink: 0 }}>✓</span>
+                  <div>
+                    <div style={{ fontSize: "13px", color: "#8ac8b0", fontWeight: 500, marginBottom: "3px" }}>{title}</div>
+                    <div style={{ fontSize: "12px", color: "#2a6a4a", fontWeight: 300, lineHeight: 1.6 }}>{desc}</div>
                   </div>
                 </div>
-                {[{ name: "Decision Liability Assessment", price: "$25,000–$35,000", scope: "Board-ready memo quantifying your institution's AI compliance exposure across all three 2026 enforcement deadlines. Signed deliverable your legal team can act on. 50% credited toward Year 1 deployment.", highlight: true }, { name: "Institutional Deployment", price: "$75,000–$200,000/yr", scope: "Multi-vertical deployment. Complete EU AI Act Annex III mapping. Ongoing artifact generation. SSO, In-VPC hosting, dedicated integration support.", highlight: false }].map((tier, i) => (
-                  <div key={i} style={{ padding: "20px", background: "#040810", border: `1px solid ${tier.highlight ? "#003a6a" : "#0d1e2e"}`, borderRadius: "4px" }}>
-                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "8px" }}>
-                      <div style={{ fontSize: "14px", color: "#c8d8e8", fontWeight: 500 }}>{tier.name}</div>
-                      <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "16px", color: tier.highlight ? "#60c0f0" : "#4a7a9a", fontWeight: 500 }}>{tier.price}</div>
-                    </div>
-                    <div style={{ fontSize: "12px", color: "#2a5a7a", lineHeight: "1.7" }}>{tier.scope}</div>
+              ))}
+            </div>
+          </div>
+
+          {/* Cards + Form */}
+          <div style={{ display: "flex", gap: "52px", flexWrap: "wrap" }}>
+
+            {/* Pricing cards */}
+            <div style={{ flex: "1.1", minWidth: "300px", display: "flex", flexDirection: "column", gap: "10px" }}>
+
+              {/* Phase 01 */}
+              <div style={{ padding: "28px", background: "#040810", border: "1px solid #0d1e2e", borderLeft: "3px solid #2a5a7a", borderRadius: "4px" }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "14px" }}>
+                  <div>
+                    <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "9px", color: "#1e5a80", letterSpacing: "0.16em", marginBottom: "6px" }}>PHASE 01</div>
+                    <div style={{ fontSize: "15px", color: "#c8d8e8", fontWeight: 600 }}>Decision Integrity Sprint</div>
                   </div>
-                ))}
+                  <div style={{ textAlign: "right", flexShrink: 0 }}>
+                    <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "22px", color: "#4a7a9a", fontWeight: 600 }}>$12,000</div>
+                    <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "9px", color: "#1e3a5a", marginTop: "2px" }}>3–4 WEEKS</div>
+                  </div>
+                </div>
+                <p style={{ fontSize: "13px", color: "#3a6a8a", lineHeight: "1.7", fontWeight: 300, marginBottom: "16px", fontStyle: "italic", borderLeft: "2px solid #1a3a5a", paddingLeft: "12px" }}>
+                  "This engagement shows what your system is doing that it should not be doing — before active enforcement is turned on."
+                </p>
+                <div style={{ display: "flex", flexDirection: "column", gap: "7px" }}>
+                  {["Authority boundary map", "Shadow-mode decision logging", "Risk flags and exposure findings", "Initial enforcement configuration"].map(d => (
+                    <div key={d} style={{ display: "flex", gap: "10px", alignItems: "center", fontSize: "12px", color: "#3a6a8a" }}>
+                      <span style={{ color: "#2a6a9a", fontFamily: "'IBM Plex Mono', monospace", fontSize: "9px", flexShrink: 0 }}>◆</span>{d}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Phase 02 */}
+              <div style={{ padding: "28px", background: "#040810", border: "1px solid #003a6a", borderLeft: "3px solid #60c0f0", borderRadius: "4px" }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "14px" }}>
+                  <div>
+                    <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "9px", color: "#60c0f0", letterSpacing: "0.16em", marginBottom: "6px" }}>PHASE 02</div>
+                    <div style={{ fontSize: "15px", color: "#c8d8e8", fontWeight: 600 }}>Decision Liability Assessment</div>
+                  </div>
+                  <div style={{ textAlign: "right", flexShrink: 0 }}>
+                    <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "22px", color: "#60c0f0", fontWeight: 600 }}>$35,000</div>
+                    <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "9px", color: "#1e3a5a", marginTop: "2px" }}>4–6 WEEKS</div>
+                  </div>
+                </div>
+                <p style={{ fontSize: "13px", color: "#4a8aaa", lineHeight: "1.7", fontWeight: 300, marginBottom: "16px", fontStyle: "italic", borderLeft: "2px solid #003a6a", paddingLeft: "12px" }}>
+                  "This is not a pilot. It is a liability exposure analysis for machine-driven decisions."
+                </p>
+                <div style={{ display: "flex", flexDirection: "column", gap: "7px" }}>
+                  {["Liability exposure analysis", "Board-ready risk report", "Policy boundary review", "50% credit toward Year 1 Active Enforcement"].map(d => (
+                    <div key={d} style={{ display: "flex", gap: "10px", alignItems: "center", fontSize: "12px", color: "#3a6a8a" }}>
+                      <span style={{ color: "#60c0f0", fontFamily: "'IBM Plex Mono', monospace", fontSize: "9px", flexShrink: 0 }}>◆</span>{d}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Phase 03 */}
+              <div style={{ padding: "28px", background: "#010d07", border: "1px solid #004d28", borderLeft: "3px solid #00d4a0", borderRadius: "4px" }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "14px" }}>
+                  <div>
+                    <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "9px", color: "#00d4a0", letterSpacing: "0.16em", marginBottom: "6px" }}>PHASE 03</div>
+                    <div style={{ fontSize: "15px", color: "#c8d8e8", fontWeight: 600 }}>Active Enforcement Layer</div>
+                  </div>
+                  <div style={{ textAlign: "right", flexShrink: 0 }}>
+                    <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", color: "#00d4a0", fontWeight: 400, marginBottom: "2px" }}>Starting at</div>
+                    <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "22px", color: "#00d4a0", fontWeight: 600, lineHeight: 1.1 }}>$120,000/yr</div>
+                  </div>
+                </div>
+                <p style={{ fontSize: "13px", color: "#2a6a4a", lineHeight: "1.7", fontWeight: 300, marginBottom: "16px" }}>
+                  Live production enforcement for AI decision systems operating in regulated, high-stakes, or high-liability environments. Runtime policy control with auditable evidence for regulators and internal governance.
+                </p>
+                <div style={{ display: "flex", flexDirection: "column", gap: "7px", marginBottom: "14px" }}>
+                  {["Active pre-execution enforcement", "Policy-as-code runtime gating", "Immutable audit evidence", "Internal governance / trust center workflows"].map(d => (
+                    <div key={d} style={{ display: "flex", gap: "10px", alignItems: "center", fontSize: "12px", color: "#2a6a4a" }}>
+                      <span style={{ color: "#00d4a0", fontFamily: "'IBM Plex Mono', monospace", fontSize: "9px", flexShrink: 0 }}>◆</span>{d}
+                    </div>
+                  ))}
+                </div>
+                <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "9px", color: "#1a4a2a", letterSpacing: "0.1em" }}>$120,000–$250,000+/YEAR DEPENDING ON SCOPE</div>
               </div>
             </div>
-            <div style={{ flex: "1", minWidth: "280px" }}>
+
+            {/* Form + Pathway */}
+            <div style={{ flex: "1", minWidth: "300px", display: "flex", flexDirection: "column", gap: "16px" }}>
+
               <div style={{ background: "#040810", border: "1px solid #0d1e2e", borderRadius: "6px", overflow: "hidden" }}>
-                <div style={{ padding: "20px 24px", borderBottom: "1px solid #0d1e2e", fontFamily: "'DM Mono', monospace", fontSize: "10px", color: "#1e5a80", letterSpacing: "0.15em" }}>REQUEST PILOT ACCESS</div>
+                <div style={{ padding: "20px 24px", borderBottom: "1px solid #0d1e2e", fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", color: "#1e5a80", letterSpacing: "0.15em" }}>BOOK AN EXPOSURE REVIEW</div>
                 {submitted ? (
                   <div style={{ padding: "48px 24px", textAlign: "center" }}>
                     <div style={{ width: "40px", height: "40px", borderRadius: "50%", background: "#001a0d", border: "1px solid #00d4a0", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px", color: "#00d4a0", fontSize: "18px" }}>✓</div>
                     <div style={{ color: "#c8d8e8", fontSize: "15px", marginBottom: "8px" }}>Request received.</div>
-                    <div style={{ color: "#2a5a7a", fontSize: "13px" }}>We'll be in touch within 24 hours to scope your pilot.</div>
+                    <div style={{ color: "#2a5a7a", fontSize: "13px" }}>We'll be in touch within 24 hours to scope your engagement.</div>
                   </div>
                 ) : (
                   <form onSubmit={e => { e.preventDefault(); setSubmitted(true); }} style={{ padding: "24px" }}>
-                    {[{ key: "name", label: "Full Name", placeholder: "Your name" }, { key: "company", label: "Company", placeholder: "Company name" }, { key: "email", label: "Work Email", placeholder: "you@company.com", type: "email" }].map(f => (
+                    {[{ key: "name", label: "Full Name", placeholder: "Your name" }, { key: "company", label: "Organization", placeholder: "Company name" }, { key: "email", label: "Work Email", placeholder: "you@company.com", type: "email" }].map(f => (
                       <div key={f.key} style={{ marginBottom: "16px" }}>
-                        <label style={{ display: "block", fontSize: "10px", color: "#1e5a80", letterSpacing: "0.12em", marginBottom: "6px", fontFamily: "'DM Mono', monospace" }}>{f.label}</label>
+                        <label style={{ display: "block", fontSize: "10px", color: "#1e5a80", letterSpacing: "0.12em", marginBottom: "6px", fontFamily: "'IBM Plex Mono', monospace" }}>{f.label}</label>
                         <input type={f.type || "text"} required value={pilotForm[f.key]} placeholder={f.placeholder}
                           onChange={e => setPilotForm({ ...pilotForm, [f.key]: e.target.value })}
                           style={{ width: "100%", background: "#030609", color: "#c8d8e8", border: "1px solid #0d1e2e", borderRadius: "3px", padding: "10px 12px", fontSize: "14px" }} />
                       </div>
                     ))}
                     <div style={{ marginBottom: "16px" }}>
-                      <label style={{ display: "block", fontSize: "10px", color: "#1e5a80", letterSpacing: "0.12em", marginBottom: "6px", fontFamily: "'DM Mono', monospace" }}>Primary Vertical</label>
+                      <label style={{ display: "block", fontSize: "10px", color: "#1e5a80", letterSpacing: "0.12em", marginBottom: "6px", fontFamily: "'IBM Plex Mono', monospace" }}>Industry</label>
                       <select value={pilotForm.vertical} onChange={e => setPilotForm({ ...pilotForm, vertical: e.target.value })}
                         style={{ width: "100%", background: "#030609", color: pilotForm.vertical ? "#c8d8e8" : "#3a5a7a", border: "1px solid #0d1e2e", borderRadius: "3px", padding: "10px 12px", fontSize: "14px" }}>
-                        <option value="">Select vertical</option>
-                        <option>Fintech / Credit</option><option>Healthcare</option><option>Supply Chain</option><option>Other regulated AI</option>
+                        <option value="">Select industry</option>
+                        <option>Fintech / Credit</option><option>Healthcare</option><option>Supply Chain</option><option>Autonomous AI / Agents</option><option>Other regulated environment</option>
                       </select>
                     </div>
                     <div style={{ marginBottom: "20px" }}>
-                      <label style={{ display: "block", fontSize: "10px", color: "#1e5a80", letterSpacing: "0.12em", marginBottom: "6px", fontFamily: "'DM Mono', monospace" }}>Tell us about your AI decision system</label>
+                      <label style={{ display: "block", fontSize: "10px", color: "#1e5a80", letterSpacing: "0.12em", marginBottom: "6px", fontFamily: "'IBM Plex Mono', monospace" }}>Describe your AI decision environment</label>
                       <textarea value={pilotForm.message} onChange={e => setPilotForm({ ...pilotForm, message: e.target.value })}
-                        placeholder="What decisions is your AI making? What compliance pressure are you facing?"
+                        placeholder="What decisions is your system making autonomously? What is the liability exposure if a decision violates policy?"
                         rows={4} style={{ width: "100%", background: "#030609", color: "#c8d8e8", border: "1px solid #0d1e2e", borderRadius: "3px", padding: "10px 12px", fontSize: "14px", resize: "vertical", fontFamily: "inherit" }} />
                     </div>
-                    <button type="submit" className="cta-primary" style={{ width: "100%" }}>REQUEST PILOT ACCESS</button>
-                    <div style={{ marginTop: "12px", fontSize: "10px", color: "#1a3a5a", textAlign: "center", fontFamily: "'IBM Plex Mono', monospace" }}>Limited slots. Three enforcement deadlines before Dec 2026.</div>
+                    <button type="submit" className="cta-primary" style={{ width: "100%" }}>BOOK EXPOSURE REVIEW</button>
+                    <div style={{ marginTop: "12px", fontSize: "10px", color: "#1a3a5a", textAlign: "center", fontFamily: "'IBM Plex Mono', monospace" }}>For institutional assessments: contact@primussystems.io</div>
                   </form>
                 )}
               </div>
+
+              {/* Adoption pathway */}
+              <div style={{ padding: "24px", background: "#040810", border: "1px solid #0d1e2e", borderRadius: "4px" }}>
+                <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "9px", color: "#1e5a80", letterSpacing: "0.14em", marginBottom: "16px" }}>ADOPTION PATHWAY</div>
+                {[
+                  ["Exposure", "Map what your system is authorized to do — and what it is doing without authorization."],
+                  ["Quantification", "Produce a board-ready liability analysis across all active AI decision vectors."],
+                  ["Control", "Deploy runtime enforcement. Unauthorized decisions cannot execute."],
+                ].map(([phase, desc], i) => (
+                  <div key={i} style={{ display: "flex", gap: "16px", padding: "11px 0", borderBottom: i < 2 ? "1px solid #0d1e2e" : "none", alignItems: "flex-start" }}>
+                    <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", color: "#00d4a0", minWidth: "100px", fontWeight: 600, marginTop: "1px" }}>{phase}</div>
+                    <div style={{ fontSize: "12px", color: "#3a6a8a", lineHeight: "1.6", fontWeight: 300 }}>{desc}</div>
+                  </div>
+                ))}
+              </div>
+
             </div>
           </div>
         </div>
