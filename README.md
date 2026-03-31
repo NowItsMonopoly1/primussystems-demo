@@ -7,12 +7,12 @@
 
 ## What This Packet Proves
 
-This packet contains a complete, independently verifiable record of a single governed AI decision.
+This packet contains a complete, independently verifiable record of a single AI decision evaluated and enforced before execution.
 
-It demonstrates three properties that most AI systems cannot provide:
+It demonstrates three properties that most AI systems do not provide:
 
 1. **Determinism** — Given the same inputs and ruleset, the system always produces the same decision.
-2. **Constraint enforcement** — A risk governor layer evaluated hard limits before the decision executed.
+2. **Pre-execution enforcement** — A risk governor layer evaluated hard limits before the decision executed and blocked anything outside constraints.
 3. **Tamper evidence** — A SHA-256 hash of the decision record detects any post-hoc modification.
 
 ---
@@ -23,8 +23,8 @@ It demonstrates three properties that most AI systems cannot provide:
 |------|---------|
 | `decision.json` | The decision record — outcome, inputs reference, rules evaluated, hash |
 | `inputs_snapshot.json` | The exact market and portfolio state at decision time |
-| `ruleset.yaml` | The governance rules evaluated, with observed values and pass/fail |
-| `risk_governor.yaml` | The hard constraints applied after ruleset passed |
+| `ruleset.yaml` | The deterministic rules evaluated, with observed values and pass/fail |
+| `risk_governor.yaml` | The hard constraints enforced before execution |
 | `decision_hash.txt` | SHA-256 hash of the canonical decision record |
 | `replay_decision.py` | Verification script — re-evaluates rules and confirms hash match |
 
@@ -85,12 +85,12 @@ The `decision_hash` field in `decision.json` is a SHA-256 hash of the canonical 
 
 If any field in `decision.json` is modified after the fact — outcome, timestamp, inputs reference, rules evaluated — the replay script will detect a hash mismatch and exit with an error.
 
-This is the foundation of Primus OS audit-first architecture: **decisions are sealed at execution time**.
+This is the foundation of Primus OS audit-first architecture: **decisions are sealed at execution time and replayable under verification**.
 
 ---
 
 ## About Primus OS
 
-Primus OS is algorithmic decision control infrastructure. It intercepts AI-generated decisions, evaluates them against a defined ruleset and risk governor, blocks non-compliant actions, and generates cryptographically sealed audit artifacts at execution time.
+Primus OS is deterministic decision control infrastructure. It intercepts AI-generated decisions, evaluates them against a defined ruleset and risk governor, blocks non-compliant actions before execution, and generates cryptographically sealed audit artifacts at execution time.
 
 **primussystems.io** | contact@primussystems.io

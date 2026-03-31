@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 export default function SecurityCompliance() {
   const tsc = [
     { criterion: "Security (CC)", scope: "Type I", controls: ["Role-based access with MFA enforcement", "TLS 1.3 in transit · AES-256 at rest", "Dependency scanning on every commit", "Incident response — 4hr acknowledgment SLA"], status: "ACTIVE" },
-    { criterion: "Availability (A)", scope: "Type I", controls: ["Vercel Edge Network — 99.95% SLA", "Real-time uptime and performance monitoring"], status: "ACTIVE" },
+    { criterion: "Availability (A)", scope: "Type I", controls: ["Vercel Edge Network — 99.95% SLA", "Real-time uptime and performance enforcement telemetry"], status: "ACTIVE" },
     { criterion: "Confidentiality (C)", scope: "Type I", controls: ["Customer decision data isolated per tenant", "All sub-processors maintain SOC 2 Type II", "Customer-defined retention; deletion on termination"], status: "ACTIVE" },
     { criterion: "Processing Integrity (PI)", scope: "Type II", controls: ["Scheduled for Type II observation period"], status: "PLANNED" },
     { criterion: "Privacy (P)", scope: "Type II", controls: ["Scheduled for Type II observation period"], status: "PLANNED" },
   ];
 
   const subprocessors = [
-    { name: "Vercel", role: "Platform hosting and global CDN", cert: "SOC 2 Type II", data: "Application data, logs, request routing" },
+    { name: "Vercel", role: "Infrastructure hosting and global CDN", cert: "SOC 2 Type II", data: "Application data, logs, request routing" },
     { name: "Anthropic", role: "AI model inference (Claude API)", cert: "SOC 2 Type II", data: "Prompt and response data only" },
     { name: "GitHub", role: "Source code management and CI", cert: "SOC 2 Type II", data: "Source code only — no customer data" },
   ];
@@ -34,13 +34,13 @@ export default function SecurityCompliance() {
       act: "EU Product Liability Directive",
       deadline: "Dec 9, 2026",
       color: "#00d4a0",
-      requirement: "Software treated as a product; defects in AI features trigger strict liability for importers and hosting platforms.",
-      alignment: "Primus immutable logs establish that the system operated within defined parameters at the moment of action — the operational record required to rebut a product liability claim.",
+      requirement: "Software treated as a product; defects in AI features trigger strict liability for importers and hosting infrastructure providers.",
+      alignment: "Primus cryptographic decision records establish that the system operated within defined constraints at the moment of action — the operational record required to rebut a product liability claim.",
     },
   ];
 
   const roadmap = [
-    { date: "Apr 2026", milestone: "Readiness platform onboarded (Drata)", status: "COMPLETE", color: "#00d4a0" },
+    { date: "Apr 2026", milestone: "Readiness controls system onboarded (Drata)", status: "COMPLETE", color: "#00d4a0" },
     { date: "May 2026", milestone: "Internal control documentation — Access Control + Incident Response policies", status: "IN PROGRESS", color: "#e08040" },
     { date: "Jun 2026", milestone: "Auditor engaged (A-LIGN / Prescient Assurance)", status: "PLANNED", color: "#2a5a7a" },
     { date: "Jul–Aug 2026", milestone: "SOC 2 Type I examination window", status: "PLANNED", color: "#2a5a7a" },
@@ -97,7 +97,7 @@ export default function SecurityCompliance() {
               Vendor Security Posture<br /><span style={{ color: "#00d4a0" }}>Statement</span>
             </h1>
             <p style={{ fontSize: "16px", color: "#6a9ab8", lineHeight: "1.7", marginBottom: "32px", fontWeight: 300, maxWidth: "640px" }}>
-              This document establishes the current security posture of Primus Systems and outlines our formal path to SOC 2 Type I attestation. It is intended for procurement teams, vendor risk assessors, and institutional compliance reviews.
+              This document establishes the current security posture of Primus Systems and outlines our formal path to SOC 2 Type I attestation. It is intended for procurement teams, vendor risk assessors, and institutional infrastructure reviews.
             </p>
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", alignItems: "center" }}>
               <div className="sc-badge">
@@ -164,7 +164,7 @@ export default function SecurityCompliance() {
               SOC 2 Type I examination is scoped to <span style={{ color: "#c8d8e8", fontFamily: "'IBM Plex Mono', monospace", fontSize: "12px" }}>Security (CC) · Availability (A) · Confidentiality (C)</span>. Processing Integrity and Privacy are included in the subsequent Type II observation period.
             </p>
             <div style={{ marginBottom: "40px", padding: "12px 16px", background: "#030609", border: "1px solid #0d1e2e", borderRadius: "3px", fontFamily: "'IBM Plex Mono', monospace", fontSize: "11px", color: "#2a5a7a", lineHeight: "1.6" }}>
-              This scope is deliberate, not incomplete. The three selected criteria cover every control evaluated in standard vendor risk assessments for SaaS governance platforms.
+              This scope is deliberate, not incomplete. The three selected criteria cover the controls evaluated in standard vendor risk assessments for infrastructure software handling governed decision flows.
             </div>
             <div style={{ border: "1px solid #0d1e2e", borderRadius: "4px", overflow: "hidden" }}>
               {roadmap.map((item, i) => (

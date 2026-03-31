@@ -433,9 +433,9 @@ export default function ProofArtifact() {
 
           <div className="proof-header">
             <div className="proof-header-tag">Primus OS · Proof Artifact · v1.0</div>
-            <h1 className="proof-h1">Machine decisions that are<br /><span>verifiable by design.</span></h1>
+            <h1 className="proof-h1">Decisions enforced before execution.<br /><span>Verifiable by design.</span></h1>
             <p className="proof-header-sub">
-              Download a complete governed decision artifact from PrimusQuant. Re-evaluate every rule, confirm every constraint, verify the hash. No trust required.
+              Download a complete governed decision artifact from PrimusQuant. Re-evaluate every rule, confirm every constraint, verify the hash, and replay the decision. No trust required.
             </p>
           </div>
 
@@ -447,8 +447,8 @@ export default function ProofArtifact() {
             </div>
             <div className="proof-claim">
               <div className="proof-claim-num">Proof 02</div>
-              <div className="proof-claim-title">Governed</div>
-              <div className="proof-claim-body">Every decision passes a ruleset and a risk governor before execution. No exceptions.</div>
+              <div className="proof-claim-title">Enforced</div>
+              <div className="proof-claim-body">Every decision is evaluated against a ruleset and risk governor before execution. Invalid actions do not execute.</div>
             </div>
             <div className="proof-claim">
               <div className="proof-claim-num">Proof 03</div>
@@ -462,8 +462,8 @@ export default function ProofArtifact() {
             {[
               { name: "decision.json", desc: "Decision record — outcome, rules evaluated, governor result, hash", type: "JSON", accent: true },
               { name: "inputs_snapshot.json", desc: "Exact market and portfolio state at decision time, with inputs hash", type: "JSON", accent: false },
-              { name: "ruleset.yaml", desc: "Governance rules evaluated against inputs, with observed values", type: "YAML", accent: false },
-              { name: "risk_governor.yaml", desc: "Hard constraint enforcement layer — fail-closed by design", type: "YAML", accent: false },
+              { name: "ruleset.yaml", desc: "Deterministic rules evaluated against inputs, with observed values", type: "YAML", accent: false },
+              { name: "risk_governor.yaml", desc: "Hard constraint enforcement layer — blocks invalid actions by design", type: "YAML", accent: false },
               { name: "replay_decision.py", desc: "Verification script — re-evaluates rules and confirms hash match", type: "Python", accent: false, green: true },
             ].map(({ name, desc, type, accent, green }) => (
               <div className="proof-file-row" key={name}>
@@ -548,7 +548,7 @@ export default function ProofArtifact() {
           <div className="proof-footnote">
             <div className="proof-footnote-mark">Note</div>
             <div className="proof-footnote-text">
-              This artifact demonstrates a single governed trade decision on SOL-PERP via Drift Protocol. The replay script is self-contained — no Primus account or API key required. Questions about enterprise deployment or the Decision Liability Review program: <a href="mailto:contact@primussystems.io">contact@primussystems.io</a>
+              This artifact demonstrates a single governed trade decision on SOL-PERP via Drift Protocol. The replay script is self-contained — no Primus account or API key required. Questions about enterprise deployment or deterministic decision infrastructure: <a href="mailto:contact@primussystems.io">contact@primussystems.io</a>
             </div>
           </div>
 

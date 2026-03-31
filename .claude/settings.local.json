@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(\"c:/Users/Donte/Primussystems demo/public/downloads/.gitkeep\")",
+      "Bash(npm run:*)",
+      "mcp__claude_ai_Vercel__deploy_to_vercel",
+      "Bash(vercel deploy:*)"
+    ]
+  }
+}
