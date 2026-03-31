@@ -1,6 +1,20 @@
 import nodemailer from 'nodemailer';
 
+const CORS_HEADERS = {
+  'Access-Control-Allow-Origin': 'https://primussystems.io',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
+};
+
 export default async function handler(req, res) {
+  // Handle CORS preflight
+  if (req.method === 'OPTIONS') {
+    Object.entries(CORS_HEADERS).forEach(([k, v]) => res.setHeader(k, v));
+    return res.status(200).end();
+  }
+
+  Object.entries(CORS_HEADERS).forEach(([k, v]) => res.setHeader(k, v));
+
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
