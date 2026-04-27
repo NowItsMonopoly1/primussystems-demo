@@ -1,96 +1,48 @@
-# Primus OS — Decision Proof Packet v1
-**Decision ID:** PQ-2026-03-15-0001  
-**System:** PrimusQuant (Primus OS v0.1.0)  
-**Issued by:** Primus Systems LLC
+﻿# Primus Systems Demo
 
----
+Decision proof packet demonstrating deterministic decision infrastructure, pre-execution checks, replay verification, and tamper-evident audit artifacts.
 
-## What This Packet Proves
+This repo is a public-safe proof artifact. It shows how a single decision can be packaged with inputs, rules, governor constraints, a hash, and a replay script so that another reviewer can verify what happened.
 
-This packet contains a complete, independently verifiable record of a single AI decision evaluated and enforced before execution.
+## What This Demonstrates
 
-It demonstrates three properties that most AI systems do not provide:
+- Deterministic rule evaluation from a fixed input snapshot.
+- Pre-execution governor checks before action.
+- Tamper-evident SHA-256 decision records.
+- Replayable proof artifacts for audit review.
+- Clear separation between public demo data and private/live systems.
 
-1. **Determinism** — Given the same inputs and ruleset, the system always produces the same decision.
-2. **Pre-execution enforcement** — A risk governor layer evaluated hard limits before the decision executed and blocked anything outside constraints.
-3. **Tamper evidence** — A SHA-256 hash of the decision record detects any post-hoc modification.
+## What This Does Not Claim
 
----
+- It is not a live trading system.
+- It does not provide financial advice.
+- It does not expose private trading logic, accounts, wallets, credentials, or runtime logs.
+- It does not claim production-grade compliance readiness.
 
 ## Contents
 
 | File | Purpose |
-|------|---------|
-| `decision.json` | The decision record — outcome, inputs reference, rules evaluated, hash |
-| `inputs_snapshot.json` | The exact market and portfolio state at decision time |
-| `ruleset.yaml` | The deterministic rules evaluated, with observed values and pass/fail |
-| `risk_governor.yaml` | The hard constraints enforced before execution |
-| `decision_hash.txt` | SHA-256 hash of the canonical decision record |
-| `replay_decision.py` | Verification script — re-evaluates rules and confirms hash match |
+| --- | --- |
+| `decision.json` | Synthetic decision record and outcome. |
+| `inputs_snapshot.json` | Fixed input snapshot used for replay. |
+| `ruleset.yaml` | Deterministic rules evaluated during replay. |
+| `risk_governor.yaml` | Hard constraints checked before execution. |
+| `decision_hash.txt` | Hash for tamper-evidence. |
+| `replay_decision.py` | Verification script for replaying the proof packet. |
 
----
-
-## How to Verify
-
-**Requirements:** Python 3.8+, PyYAML (`pip install pyyaml`)
+## Safe Demo Path
 
 ```bash
+pip install pyyaml
 python replay_decision.py
 ```
 
-**Expected output:**
+Expected result: the replay script re-evaluates the public sample and confirms the decision hash.
 
-```
-============================================================
-  PRIMUS OS — Decision Replay Verification
-============================================================
+## Public/Private Boundary
 
-[1] Loaded decision: PQ-2026-03-15-0001
-    Original outcome: execute_trade
-    Original hash:    e522bd30a03d94323c337ed26d7bbcde6b43428d0c36821ecd822ca06fba21b4
+All public examples should remain synthetic. Do not add private market feeds, account data, exchange credentials, wallet information, live execution logs, or proprietary strategy logic.
 
-[2] Re-evaluating governance ruleset...
-    ✓ R-001 trend_above_MA20: PASS
-    ✓ R-002 pullback_within_range: PASS
-    ✓ R-003 volume_impulse_confirmed: PASS
-    ✓ R-004 funding_rate_not_extreme: PASS
+## Topic Recommendations
 
-[3] Re-evaluating risk governor...
-    ✓ G-001 daily_loss_cap: PASS
-    ...
-
-  ✓ REPLAY SUCCESSFUL
-  ✓ Hash match: confirmed
-  ✓ Decision is deterministic and tamper-evident.
-```
-
----
-
-## Decision Summary
-
-**Asset:** SOL-PERP (Drift Protocol)  
-**Signal:** Long entry — momentum pullback confirmed  
-**Confidence:** 0.71  
-**Rules passed:** 4/4  
-**Governor constraints passed:** 4/4  
-**Outcome:** `execute_trade`  
-**Size:** 0.25 SOL  
-**Timestamp:** 2026-03-15T14:22:19Z  
-
----
-
-## What the Hash Proves
-
-The `decision_hash` field in `decision.json` is a SHA-256 hash of the canonical decision record (all fields except the hash itself, sorted and serialized to JSON).
-
-If any field in `decision.json` is modified after the fact — outcome, timestamp, inputs reference, rules evaluated — the replay script will detect a hash mismatch and exit with an error.
-
-This is the foundation of Primus OS audit-first architecture: **decisions are sealed at execution time and replayable under verification**.
-
----
-
-## About Primus OS
-
-Primus OS is deterministic decision control infrastructure. It intercepts AI-generated decisions, evaluates them against a defined ruleset and risk governor, blocks non-compliant actions before execution, and generates cryptographically sealed audit artifacts at execution time.
-
-**primussystems.io** | contact@primussystems.io
+`auditability`, `decision-infrastructure`, `deterministic-systems`, `replayable-proof`, `ai-governance`, `public-safe-demo`
